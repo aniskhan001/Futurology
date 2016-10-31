@@ -1,0 +1,2 @@
+# Futurology
+/r/Futurology/ scraper
