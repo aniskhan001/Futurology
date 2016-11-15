@@ -1,4 +1,4 @@
-{
+payload = {
     "text": "This is a text message with attachments:",
     "attachments": [
         {
