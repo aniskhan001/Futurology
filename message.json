@@ -1,0 +1,10 @@
+{
+    "text": "This is a text message with attachments:",
+    "attachments": [
+        {
+            "title": "See my site!",
+            "title_link": "http://plugincodes.com",
+            "text": "I provide cool solutions and tips here.",
+        }
+    ]
+}
