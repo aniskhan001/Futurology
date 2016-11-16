@@ -12,7 +12,7 @@ cache = []
 
 def run_bot():
 	the_time = time.mktime( datetime.datetime.utcnow().timetuple() )
-	submissions = r.get_subreddit('Futurology').get_hot(limit=8)
+	submissions = r.get_subreddit('Futurology').get_hot()
 
 	for sub in submissions:
 		# The Top post is over 15 hours old OR less than 750 upvotes
@@ -22,7 +22,7 @@ def run_bot():
 			else:
 				cache.append(sub.id)
 				hour_diff = int( (the_time-sub.created_utc)/3600 )
-				s.notify(text = "There's an open position on /r/Futurology! The top post has " + str(sub.score) + " points and was posted " + str( hour_diff ) + " hours ago.")
+				s.notify(text = "There's an open position on /r/Futurology! The top post has *" + str(sub.score) + " points* and was posted *" + str( hour_diff ) + " hours* ago.")
 
 while True:
 	run_bot()
