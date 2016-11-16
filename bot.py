@@ -10,7 +10,7 @@ cache = []
 
 def run_bot():
 	the_time = time.mktime( datetime.datetime.utcnow().timetuple() )
-	submissions = r.get_subreddit('Futurology').get_hot(limit=3)
+	submissions = r.get_subreddit('Futurology').get_hot()
 
 	for sub in submissions:
 		# The Top post is over 15 hours old OR less than 750 upvotes
@@ -24,4 +24,5 @@ def run_bot():
 
 while True:
 	run_bot()
-	time.sleep(2*60) # 2 minutes call interval
+	s.notify(text = 'Sleep time')
+	time.sleep(1*60) # 2 minutes call interval
