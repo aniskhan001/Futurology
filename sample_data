@@ -1,3 +1,7 @@
+*****************************************
+***** Data fetched from PRAW object *****
+*****************************************
+
 {
     'contest_mode': False,
     'json_dict': None,
