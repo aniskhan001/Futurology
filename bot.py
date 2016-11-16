@@ -22,7 +22,7 @@ def run_bot():
 			else:
 				cache.append(sub.id)
 				hour_diff = int( (the_time-sub.created_utc)/3600 )
-				s.notify(text = "There's an open position on /r/Futurology! The top post has *" + str(sub.score) + " points* and was posted *" + str( hour_diff ) + " hours* ago.")
+				s.notify(text = sub.title + "\nThere's an open position on /r/Futurology! The top post has *" + str(sub.score) + " points* and was posted *" + str( hour_diff ) + " hours* ago.")
 				# print "There's an open position on /r/Futurology! The top post has *" + str(sub.score) + " points* and was posted *" + str( hour_diff ) + " hours* ago."
 
 while True:
