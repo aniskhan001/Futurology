@@ -2,9 +2,11 @@ import praw
 import time
 import datetime
 import slackweb
+from os import environ
+
 
 r = praw.Reddit(user_agent = "/r/Futurology/ scraper by aniskhan001")
-s = slackweb.Slack(url = WEBHOOK_URL)
+s = slackweb.Slack(url = environ.get('WEBHOOK_URL'))
 
 cache = []
 
