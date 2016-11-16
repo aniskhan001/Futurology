@@ -4,13 +4,13 @@ import datetime
 import slackweb
 
 r = praw.Reddit(user_agent = "/r/Futurology/ scraper by aniskhan001")
-s = slackweb.Slack(url="https://hooks.slack.com/services/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")
+s = slackweb.Slack(url = WEBHOOK_URL)
 
 cache = []
 
 def run_bot():
 	the_time = time.mktime( datetime.datetime.utcnow().timetuple() )
-	submissions = r.get_subreddit('Futurology').get_hot()
+	submissions = r.get_subreddit('Futurology').get_hot(limit=8)
 
 	for sub in submissions:
 		# The Top post is over 15 hours old OR less than 750 upvotes
