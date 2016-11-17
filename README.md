@@ -1,6 +1,6 @@
-# SubReddit 2 SlackChannel
+# SubReddit 2 Slack
 
-Grab submissions from **/r/`your-submission`/** an post directly to your Slack channel.
+Grab submissions from **/r/`your-submission`/** and post directly to your Slack channel.
 
 #### This script uses:
 * [PRAW](https://praw.readthedocs.io/en/stable/) `pip install praw`
