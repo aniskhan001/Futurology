@@ -18,7 +18,7 @@ def run_bot():
 		if ( (the_time - sub.created_utc > 54000 or sub.score < 750) and (sub.id not in cache) ):
 				cache.append(sub.id)
 				hour_diff = int( (the_time-sub.created_utc)/3600 )
-				s.notify(text = sub.title + "\nThere's an open position on <"+ sub.permalink +"|/r/Futurology!> The top post has *" + str(sub.score) + " points* and was posted *" + str( hour_diff ) + " hours* ago.")
+				s.notify(text = "There's an open position on <"+ sub.permalink +"|/r/Futurology!> The top post has *" + str(sub.score) + " points* and was posted *" + str( hour_diff ) + " hours* ago.")
 
 while True:
 	run_bot()
